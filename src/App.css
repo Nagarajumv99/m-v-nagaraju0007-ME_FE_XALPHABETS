@@ -1,0 +1,129 @@
+:root {
+  font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
+  color: #111827;
+  background: #f4f6fb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 32px 20px;
+  box-sizing: border-box;
+  background: linear-gradient(135deg, #f5f7fc 0%, #eef1f8 100%);
+}
+
+.alphabet-card {
+  width: min(100%, 730px);
+  padding: 24px 18px 18px;
+  box-sizing: border-box;
+  border: 1px solid #e8eaf0;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 14px 28px rgba(29, 42, 68, 0.08);
+}
+
+.intro {
+  text-align: center;
+}
+
+.intro h1 {
+  margin: 0 0 8px;
+  font-size: clamp(24px, 3vw, 30px);
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -0.6px;
+}
+
+.intro p {
+  margin: 0 0 16px;
+  color: #8a8f9c;
+  font-size: 12px;
+}
+
+.output {
+  min-height: 38px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  box-sizing: border-box;
+  border: 1px solid #e8eaf0;
+  border-radius: 8px;
+  color: #1f2937;
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+.output:empty {
+  color: #8f96a3;
+}
+
+.controls {
+  display: flex;
+  justify-content: flex-end;
+  margin: 6px 0 14px;
+}
+
+.key-grid {
+  display: grid;
+  grid-template-columns: repeat(13, minmax(0, 1fr));
+  gap: 7px;
+}
+
+.key {
+  min-height: 48px;
+  padding: 0 4px;
+  border: 1px solid #e9ebf0;
+  border-radius: 8px;
+  background: #fff;
+  color: #111827;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: border-color 160ms ease, background 160ms ease, transform 160ms ease;
+}
+
+.key:hover {
+  border-color: #b8c1d1;
+  background: #f8faff;
+}
+
+.key:active {
+  transform: translateY(1px);
+  background: #eef2f8;
+}
+
+.key:focus-visible {
+  outline: 3px solid #bfd0f3;
+  outline-offset: 2px;
+}
+
+.backspace {
+  min-height: 30px;
+  padding: 0 10px;
+  color: #7e8490;
+  font-size: 11px;
+  font-weight: 400;
+}
+
+@media (max-width: 620px) {
+  .app-shell {
+    padding: 20px 12px;
+  }
+
+  .alphabet-card {
+    padding: 22px 12px 14px;
+  }
+
+  .key-grid {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+  }
+
+  .key {
+    min-height: 44px;
+  }
+}
