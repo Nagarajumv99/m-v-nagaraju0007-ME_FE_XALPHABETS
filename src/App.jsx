@@ -38,7 +38,7 @@ function App() {
         </div>
 
         <div className="controls">
-          <button type="button" className="key backspace" onClick={removeLetter}>
+          <button type="button" className="backspace" onClick={removeLetter}>
             Backspace
           </button>
         </div>
